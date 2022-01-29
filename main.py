@@ -7,13 +7,13 @@ app = FastAPI()
 async def root():
     return {"message": "First AWS project!"}
     
-@app.get("/celsius-fahrenheit/{num}")
-async def culsiusToFahrenheit(num: int):
+@app.get("/c-f/{num}")
+async def celsius_cahrenheit(num: int):
     result = num*9/5 + 32
     return {"Fahrenheit": result}
 
-@app.get("/fahrenheit-celsius/{num}")
-async def culsiusToFahrenheit(num: int):
+@app.get("/f-c/{num}")
+async def fahrenheit_celsius(num: int):
     result = (num - 32) * 5 / 9
     return {"Celsius": result}
 
